@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="domain.Transaction" table="transaction">
+        <id 
+			name="id" 
+			column="id"
+			type="int"
+			length="20" 
+		><generator class="increment"/> 
+		</id>
+		<property
+			name="clientid"
+			column="clientid"
+			update="true"
+			insert="true"
+			not-null="true"
+			type="java.lang.String"
+			length="45"
+		></property>
+		<property
+			name="brokerid"
+			column="brokerid"
+			update="true"
+			insert="true"
+			not-null="true"
+			type="java.lang.String"
+			length="45"
+		></property>
+		<property
+			name="commodityid"
+			column="commodityid"
+			update="true"
+			insert="true"
+			not-null="true"
+			type="java.lang.String"
+			length="45"
+		></property>		
+		<property
+			name="quantity"
+			column="quantity"
+			update="true"
+			insert="true"
+			not-null="true"
+			type="int"
+			length="45"
+		></property>
+		<property
+			name="bidprice"
+			column="bidprice"
+			update="true"
+			insert="true"
+			not-null="true"
+			type="int"
+			length="45"
+		></property>
+		<property
+			name="askprice"
+			column="askprice"
+			update="true"
+			insert="true"
+			not-null="true"
+			type="int"
+			length="45"
+		></property>
+		<property
+			name="lastprice"
+			column="lastprice"
+			update="true"
+			insert="true"
+			not-null="true"
+			type="int"
+			length="45"
+		></property>
+    </class>
+</hibernate-mapping>
